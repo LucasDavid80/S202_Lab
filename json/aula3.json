@@ -1,0 +1,25 @@
+{
+    "Aula3": {
+        "nome": "C204",
+        "assunto": "Algoritmos III",
+        "professor": "Ynoguti",
+        "alunos": [
+            {
+                "nome": "Ana",
+                "idade": 19
+            },
+            {
+                "nome": "João",
+                "idade": 21
+            },
+            {
+                "nome": "Camila",
+                "idade": 21
+            },
+            {
+                "nome": "Vinicius",
+                "idade": 22
+            }
+        ]
+    }
+}

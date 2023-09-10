@@ -1,0 +1,25 @@
+{
+    "Aula1": {
+        "nome": "C206",
+        "assunto": "Programação Orientada a Objetos - POO",
+        "professor": "Chris",
+        "alunos": [
+            {
+                "nome": "Lucas",
+                "idade": 20
+            },
+            {
+                "nome": "João",
+                "idade": 21
+            },
+            {
+                "nome": "Davi",
+                "idade": 20
+            },
+            {
+                "nome": "Vinicius",
+                "idade": 22
+            }
+        ]
+    }
+}
