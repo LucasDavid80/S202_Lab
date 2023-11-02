@@ -1,0 +1,28 @@
+1)
+   1-MATCH (n) RETURN n
+
+   2-MATCH(j:Game) WHERE j.ano > 2012 RETURN j;
+
+   3-MATCH(j:Game) WHERE j.genero ='Terror' RETURN j;
+
+   4-MATCH (j:Jurado)-[jogou:JOGOU]->(g:Game) WHERE jogou.nota >= 7 RETURN g;
+
+2)
+   1-
+   CREATE(g:Game{titulo:'Cyberpunk 2077', genero:'RPG', ano:2020});
+   CREATE(g:Game{titulo:'The Witcher 3: Wild Hunt', genero:'RPG', ano:2015});
+   CREATE(g:Game{titulo:'Valorant', genero:'Shooter', ano:2020});
+   CREATE(g:Game{titulo:'FIFA 23', genero:'Esporte', ano:2023});
+
+   2-
+   CREATE(j:Jurado{nome:'Alice'});
+   CREATE(j:Jurado{nome:'Eduardo'});
+   CREATE(j:Jurado{nome:'Fernanda'});
+
+   3-
+   MATCH(j:Jurado{nome:'Eduardo'}),(g:Game{titulo:'Cyberpunk 2077'}) CREATE(j)-[:JOGOU{nota:8, horas: 300}]->(g);
+   MATCH(j:Jurado{nome:'Fernanda'}),(g:Game{titulo:'The Witcher 3: Wild Hunt'}) CREATE(j)-[:JOGOU{nota:9, horas: 500}]->(g);
+   MATCH(j:Jurado{nome:'Alice'}),(g:Game{titulo:'Valorant'}) CREATE(j)-[:JOGOU{nota:7, horas: 200}]->(g);
+   MATCH(j:Jurado{nome:'Eduardo'}),(g:Game{titulo:'FIFA 23'}) CREATE(j)-[:JOGOU{nota:8, horas: 100}]->(g);
+
+
